@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "TwitchCast",
+  "description": "This extension allows you to transmit Twitch.tv livestreams in a Chromecast-like fashion.",
+  "version": "0.1",
+  
+  "icons": { 
+	"16": "icon16.png",
+	"48": "icon48.png",
+	"128": "icon128.png" 
+	},
+	
+	"browser_action": {
+		"default_icon": "icon38.png"
+	},
+	  
+	"options_page": "options.html",
+
+  "permissions": [
+	"https://*/*", 
+	"http://*/*",
+    "http://localhost:8080/",
+	"tabs",
+	"storage"
+  ],
+  
+  "background": {
+    "scripts": ["socket.io.js", "background.js"],
+    "persistent": false
+  }
+}
